@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "d3c41b9e-fe12-4c06-b39b-f48c02c5c617",
+		"name": "Simulador de Emprestimo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Financeiras",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/financeiras",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"financeiras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convenios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/convenios",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"convenios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simular Crédito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"valor_emprestimo\": 150000.58,\r\n    \"convenios\": [\r\n        \"INSS\",\r\n        \"FEDERAL\"\r\n    ],\r\n    \"parcela\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/creditos",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"creditos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
